@@ -53,6 +53,11 @@ def delete(sno):
     db.session.commit()
     return redirect("/")
 
+@app.route('/about')
+def about():
+    return render_template("about.html", message="About Page")
+
+
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
     
